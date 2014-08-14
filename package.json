@@ -1,0 +1,21 @@
+{
+  "name": "nodebb-plugin-redactor-editor",
+  "version": "0.0.1-1",
+  "description": "An editor replacement using Redactor",
+  "main": "index.js",
+  "publishConfig":{"registry":"http://registry.npmjs.org"},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ipetepete/nodebb-plugin-redactor-editor"
+  },
+  "keywords": [
+    "nodebb"
+  ],
+  "author": {
+    "name": "Pete Peterson"
+  },
+  "dependencies":{
+    "redactor-s3-url-signer" : "~0.0.0"
+  },
+  "license": "MIT"
+}

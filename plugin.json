@@ -1,0 +1,30 @@
+{
+  "id": "nodebb-plugin-redactor-editor",
+  "name": "Redactor Editor",
+  "description": "An editor replacement using Redactor",
+  "url": "https://github.com/ipetepete/nodebb-plugin-redactor-editor",
+  "library": "./index.js",
+  "templates": "./templates",
+  "scripts": [
+    "client-scripts/redactor.js",
+    "redactor/redactor.js"
+  ],
+  "less": [
+    "./style/composer.less"
+  ],
+  "hooks": [
+    {
+      "hook": "action:plugin.activate",
+      "method": "pluginActivation"
+    },
+    {
+      "hook": "filter:admin.header.build",
+      "method": "addAdminNavigation"
+    },
+    {
+      "hook": "action:app.load",
+      "method": "init"
+    }
+  ],
+  "minver": "0.0.1-1"
+}

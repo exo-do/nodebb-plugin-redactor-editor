@@ -1,0 +1,34 @@
+{
+  "id": "nodebb-plugin-redactor-editor",
+  "name": "Redactor Editor",
+  "description": "An editor replacement using Redactor",
+<<<<<<< HEAD
+  "url": "https://stash.dev.artfire.me/scm/cf/nodebb-plugin-af-redactor-editor",
+=======
+  "url": "https://github.com/ipetepete/nodebb-plugin-redactor-editor",
+>>>>>>> ba81effcb7d4575e26463ad7a2f622a4207e74e2
+  "library": "./index.js",
+  "templates": "./templates",
+  "scripts": [
+    "client-scripts/redactor.js",
+    "redactor/redactor.js"
+  ],
+  "less": [
+    "./style/composer.less"
+  ],
+  "hooks": [
+    {
+      "hook": "action:plugin.activate",
+      "method": "pluginActivation"
+    },
+    {
+      "hook": "filter:admin.header.build",
+      "method": "addAdminNavigation"
+    },
+    {
+      "hook": "action:app.load",
+      "method": "init"
+    }
+  ],
+  "minver": "0.0.1-1"
+}
