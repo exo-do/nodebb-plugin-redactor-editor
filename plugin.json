@@ -22,7 +22,7 @@
       "method": "addAdminNavigation"
     },
     {
-      "hook": "action:app.load",
+      "hook": "static:app.load",
       "method": "init"
     }
   ],
