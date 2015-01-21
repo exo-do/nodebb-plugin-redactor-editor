@@ -10,7 +10,7 @@
     "redactor/redactor.js"
   ],
   "less": [
-    "./style/composer.less"
+    "./redactor/redactor.less"
   ],
   "hooks": [
     {
