@@ -24,5 +24,9 @@
 	}, 
 	module.exports.pluginActivation = function (id) {
 		return id === plg.id ? cfg.setOnEmpty() : void 0
+	},
+	module.exports.parsePost = function (post, callback) {
+		post.content = post.content.replace(/<br>(<\/br>)?/g, '\n'); //Reemplazamos los <br> para que no afecten a Markdown
+		callback(null, post);
 	}
 }).call(this);

@@ -1,33 +1,38 @@
 {
-  "id": "nodebb-plugin-redactor-editor",
-  "name": "Redactor Editor",
-  "description": "An editor replacement using Redactor",
-  "url": "https://github.com/ipetepete/nodebb-plugin-redactor-editor",
-  "library": "./index.js",
-  "templates": "./templates",
-  "scripts": [
+	"id": "nodebb-plugin-redactor-editor",
+	"name": "Redactor Editor",
+	"description": "An editor replacement using Redactor",
+	"url": "https://github.com/ipetepete/nodebb-plugin-redactor-editor",
+	"library": "./index.js",
+	"templates": "./templates",
+	"scripts": [
     "client-scripts/redactor.js",
     "redactor/redactor.js",
     "redactor/plugins/fullscreen.js",
     "redactor/plugins/imagemanager.js",
     "redactor/plugins/fontcolor.js"
   ],
-  "less": [
+	"less": [
     "./redactor/redactor.less"
   ],
-  "hooks": [
-    {
-      "hook": "action:plugin.activate",
-      "method": "pluginActivation"
-    },
-    {
-      "hook": "filter:admin.header.build",
-      "method": "addAdminNavigation"
-    },
-    {
-      "hook": "static:app.load",
-      "method": "init"
-    }
+	"hooks": [
+		{
+			"hook": "action:plugin.activate",
+			"method": "pluginActivation"
+		},
+		{
+			"hook": "filter:admin.header.build",
+			"method": "addAdminNavigation"
+    	},
+		{
+			"hook": "static:app.load",
+			"method": "init"
+    	},
+		{
+			"hook": "filter:post.save",
+			"method": "parsePost",
+			"priority": -10
+    	}
   ],
-  "minver": "0.0.1-1"
+	"minver": "0.0.1-1"
 }
