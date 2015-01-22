@@ -7,7 +7,10 @@
   "templates": "./templates",
   "scripts": [
     "client-scripts/redactor.js",
-    "redactor/redactor.js"
+    "redactor/redactor.js",
+    "redactor/plugins/fullscreen.js",
+    "redactor/plugins/imagemanager.js",
+    "redactor/plugins/fontcolor.js"
   ],
   "less": [
     "./redactor/redactor.less"
